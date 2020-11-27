@@ -1,7 +1,7 @@
 # Gremlin-Visualizer
 This project is to visualize the graph network corresponding to a gremlin query. This fork has been modified to work specifically with an Azure CosmosDB Gremlin Graph Database.
 
-![alt text](https://raw.githubusercontent.com/wigsaparelli/Readme-Materials/master/Gremlin-Visualizer.png)
+![alt text](https://raw.githubusercontent.com/prabushitha/Readme-Materials/master/Gremlin-Visualizer.png)
 
 ### Setting Up Gremlin Visualizer
 To setup gremlin visualizer, you need to have `node.js` and `npm` installed in your system.
