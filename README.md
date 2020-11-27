@@ -1,16 +1,16 @@
 # Gremlin-Visualizer
-This project is to visualize the graph network corresponding to a gremlin query.
+This project is to visualize the graph network corresponding to a gremlin query. This fork has been modified to work specifically with an Azure CosmosDB Gremlin Graph Database.
 
-![alt text](https://raw.githubusercontent.com/prabushitha/Readme-Materials/master/Gremlin-Visualizer.png)
+![alt text](https://raw.githubusercontent.com/wigsaparelli/Readme-Materials/master/Gremlin-Visualizer.png)
 
 ### Setting Up Gremlin Visualizer
 To setup gremlin visualizer, you need to have `node.js` and `npm` installed in your system.
 
 * Clone the project
 ```sh
-git clone https://github.com/prabushitha/gremlin-visualizer.git
+git clone https://github.com/wigsaparelli/gremlin-visualizer.git
 ```
-* Install dependencies
+* Change directory to gremlin-visualizer then install dependencies
 ```sh
 npm install
 ```
@@ -53,10 +53,17 @@ docker run --rm -d -p 3000:3000 -p 3001:3001 --name=gremlin-visualizer prabushit
 The Docker container can be stopped by calling `docker stop gremlin-visualizer`.
 
 ### Usage
+* Create a .env file in the project directory and create the required environment variables like the following example values:
+
+gremlinEndpoint=wss://my-azure-cosmos-db-account.gremlin.cosmos.azure.com:443/  
+primaryKeyReadOnly=my-azure-cosmos-db-account-key  
+database=my-cosmos-database  
+container=my-cosmos-container
+
 * Start Gremlin-Visualizer as mentioned above
 * Start or tunnel a gremlin server
 * Specify the host and port of the gremlin server
-* Write an gremlin query to retrieve a set of nodes (eg. `g.V()`)
+* Write a gremlin query to retrieve a set of nodes (eg. `g.V()`)
 
 ### Features
 * If you don't clear the graph and execute another gremlin query, results of previous query and new query will be merged and be shown.

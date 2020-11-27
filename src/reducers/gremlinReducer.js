@@ -3,7 +3,7 @@ import { ACTIONS } from '../constants';
 const initialState = {
   host: 'localhost',
   port: '8182',
-  query: '',
+  query: `g.V().has('squp_type').or(has('name', startingWith('OPP-APP')), has('name', startingWith('OPP-WEB'))).out().in()`,
   error: null
 };
 

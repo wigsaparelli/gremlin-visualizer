@@ -23,7 +23,7 @@ export const extractEdgesAndNodes = (nodeList, nodeLabels=[]) => {
   _.forEach(nodeList, (node) => {
     const type = node.label;
     if (!nodeLabelMap[type]) {
-      const field = selectRandomField(node.properties);
+      const field = 'squp_display';//selectRandomField(node.properties);
       const nodeLabel = { type, field };
       nodeLabels.push(nodeLabel);
       nodeLabelMap[type] = field;
