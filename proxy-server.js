@@ -62,13 +62,10 @@ function mapEdges(edgeList) {
 
 function getNodeLabel(node) {
     const sourceName = node.properties.sourceName;
-    if (sourceName && sourceName[0] === 'SCOM') {
-        return 'SCOM node';
-    } else if (sourceName && sourceName[0] === 'New Relic') {
-        return 'New Relic node';
-    } else {
-        return 'Canonical node';
+    if (!sourceName) {
+        return 'Canonical';
     }
+    return sourceName[0] || sourceName;
 }
 
 function mapNodes(nodeList) {
